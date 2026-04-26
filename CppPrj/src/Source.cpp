@@ -45,3 +45,34 @@ int main() {
 		std::cout << "Student year: " << student.year << std::endl;
 	}
 }
+
+
+//class Car {
+//public:
+//
+//	std::string carName;
+//	int RegNumber;
+//	std::string carType;
+//	Car(const std::string& Name, int Number, const std::string& Type)
+//		: carName{ Name }, RegNumber{ Number }, carType{ Type }
+//	{
+//		std::cout << "Constructor is created" << std::endl;
+//	}
+//
+//	~Car() {
+//		std::cout << "Constructor is dead" << std::endl;
+//	}
+//	
+//};
+//
+//int main() {
+//	Car carOne{ "Toyota Fortuner", 5634, "SUV" };
+//	std::vector<Car> caar = { carOne };
+//	for (Car cars : caar) {
+//		std::cout << cars.carName << std::endl;
+//		std::cout << cars.RegNumber << std::endl;
+//		std::cout << cars.carType << std::endl;
+//
+//	}
+//}
+//
