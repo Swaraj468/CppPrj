@@ -26,6 +26,10 @@ public:
 	~Student() {
 		std::cout << "student " << name << " is destructed" << std::endl;
 	}
+	void SayHello() {
+		std::cout << name << " Say Hello" << std::endl;
+	}
+
 	std::string name;
 	int ID;
 	int year;
@@ -33,17 +37,9 @@ private:
 	int secrate;
 };
 
-
 int main() {
-	Student studentOne{ "Sam", 12111470, 1 }; //making an instance of student. a real variable.
-
-	Student studentTwo{ "Emily", 002, 2 };
-	std::vector<Student> students = { studentOne, studentTwo };
-	for (Student& student : students) {
-		std::cout << "Student name: " << student.name << std::endl;
-		std::cout << "Student ID: " << student.ID << std::endl;
-		std::cout << "Student year: " << student.year << std::endl;
-	}
+	std::cout << "ONLY THIS SHOULD RUN\n";
+	return 0;
 }
 
 
