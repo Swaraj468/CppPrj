@@ -1,6 +1,6 @@
 #include<iostream>
 #include<vector>
-#include<algorithm>
+#include<algorithm>	
 #include "Header.h"
 #include <memory>
 
@@ -14,11 +14,9 @@ public:
 
 		: name{ studentName }, ID{ studentID }, year{ studentYear }	// initializer more performant than doing the assignement in the body of the constructor
 	{
-		//		// this is a default constructor. if you do not provide any constructor, this will be automatically created. if you do provide a constructor, then default constructor will not be created for you
-
 		std::cout << "custom constructor called" << std::endl;
 	}
-	Student(const char* rawStringName, int  studentID, int studentYear) //you can create different constructors. as long as their signature are different.
+		Student(const char* rawStringName, int  studentID, int studentYear) //you can create different constructors. as long as their signature are different.
 		:Student{ std::string{rawStringName}, studentID, studentYear }//: name{rawStringName}, ID{studentID}, year{studentYear}
 	{
 		std::cout << "raw char constructor called" << std::endl;
@@ -82,10 +80,10 @@ private:
 
 int main() {
 	Student studentOne{ "Sam", 12111470, 1 }; //making an instance of student. a real variable.
-	//studentOne.sayHello();
-	//while (!studentOne.IsGraduated()) {
-	//	studentOne.IncrementYear();
-	//}
+	studentOne.sayHello();
+	while (!studentOne.IsGraduated()) {
+		studentOne.IncrementYear();
+	}
 	studentOne.setId(1);
 	std::cout << studentOne.GetId() << std::endl;
 
@@ -94,12 +92,11 @@ int main() {
 
 //class Car {
 //public:
-//
 //	std::string carName;
-//	int RegNumber;
+//	
 //	std::string carType;
-//	Car(const std::string& Name, int Number, const std::string& Type)
-//		: carName{ Name }, RegNumber{ Number }, carType{ Type }
+//	Car(const std::string& Name, int Number, const std::string& Type, const std::string& Gas)
+//		: carName{ Name }, RegNumber{ Number }, carType{ Type }, TotalGas{Gas}
 //	{
 //		std::cout << "Constructor is created" << std::endl;
 //	}
@@ -107,17 +104,40 @@ int main() {
 //	~Car() {
 //		std::cout << "Constructor is dead" << std::endl;
 //	}
-//	
+//	void setRegNumber(int num) {
+//		if (num < 0) {
+//			std::cout << "The car number is wrong";
+//			return;
+//		}
+//		RegNumber = num;
+//	}
+//	int GetRegNumber() {
+//		return RegNumber;
+//	}
+//
+//	void setTotaGas(std::string haas) {
+//		if (haas.empty() && std::all_of(haas.begin(), haas.end(), ::isdigit)) {
+//			std::cout << "Wrong value for the game" << std::endl;
+//			return;
+//		}
+//		TotalGas = haas;
+//	}
+//	std::string GetTotalGas() {
+//		return TotalGas;
+//	}
+//private:
+//	int RegNumber;
+//	std::string TotalGas;
 //};
 //
 //int main() {
-//	Car carOne{ "Toyota Fortuner", 5634, "SUV" };
-//	std::vector<Car> caar = { carOne };
-//	for (Car cars : caar) {
-//		std::cout << cars.carName << std::endl;
-//		std::cout << cars.RegNumber << std::endl;
-//		std::cout << cars.carType << std::endl;
+//	Car carOne{ "Toyota Fortuner", 5634, "SUV", "65 liters"};
+//	carOne.setRegNumber(-1);
+//	std::cout << carOne.GetRegNumber() << std::endl;
 //
-//	}
+//	carOne.setTotaGas("");
+//	std::cout << carOne.GetTotalGas() << std::endl;
+//
+//
 //}
 //
