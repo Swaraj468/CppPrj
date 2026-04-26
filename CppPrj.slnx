@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="D:/CppPrj/CppPrj/CppPrj/CppPrj.vcxproj" Id="f6473185-8a95-40e0-bf3b-0c7ffe1f8cc0">
+    <BuildDependency Project="D:/CppPrj/CppPrj/utility/utility.vcxproj" />
+  </Project>
+  <Project Path="D:/CppPrj/CppPrj/utility/utility.vcxproj" Id="8f7e7c83-60e9-45d0-a3b5-fe58cffdcd2f" />
+</Solution>
