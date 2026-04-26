@@ -77,7 +77,6 @@ private:
 	int secrate;
 };
 
-
 int main() {
 	Student studentOne{ "Sam", 12111470, 1 }; //making an instance of student. a real variable.
 	studentOne.sayHello();
