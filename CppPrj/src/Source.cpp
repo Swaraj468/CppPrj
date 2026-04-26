@@ -26,24 +26,69 @@ public:
 	~Student() {
 		std::cout << "student " << name << " is destructed" << std::endl;
 	}
+	void sayHello() {
+		std::cout << "Say Hi " << name << std::endl;
+	}
+
+	void IncrementYear() {
+		year++;
+		switch (year)
+		{
+		case 1:
+			std::cout<< name<< " is in freshman"<<std::endl;
+			break;
+		case 2:
+			std::cout << name << " is in 2nd year" << std::endl;
+			break;
+		case 3:
+			std::cout << name << " is in junior year" << std::endl;
+			break;
+		case 4:
+			std::cout << name << " is in last year" << std::endl;
+			break;
+
+		default:	
+			std::cout << name << " is graduated" << std::endl;
+			break;
+		}
+	}
+	bool IsGraduated() {
+		return year > 4;
+	}
+	//setters
+	void setId(int newID) {
+		if (newID < 0) 
+		{
+			std::cout << "Wrong Id Value, it should be positive";
+			return;
+		}
+		ID = newID;
+	}
+	//getters
+	int GetId() {
+		return ID;
+	}
+
 	std::string name;
-	int ID;
-	int year;
+	
+
+
 private:
+	int ID;
+	int year; //to have the member in the private section. and provide the private function to alter the value.
 	int secrate;
 };
 
 
 int main() {
 	Student studentOne{ "Sam", 12111470, 1 }; //making an instance of student. a real variable.
+	//studentOne.sayHello();
+	//while (!studentOne.IsGraduated()) {
+	//	studentOne.IncrementYear();
+	//}
+	studentOne.setId(1);
+	std::cout << studentOne.GetId() << std::endl;
 
-	Student studentTwo{ "Emily", 002, 2 };
-	std::vector<Student> students = { studentOne, studentTwo };
-	for (Student& student : students) {
-		std::cout << "Student name: " << student.name << std::endl;
-		std::cout << "Student ID: " << student.ID << std::endl;
-		std::cout << "Student year: " << student.year << std::endl;
-	}
 }
 
 
